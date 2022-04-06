@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ######################################################
+#########################################################
+#########################################################
+###################################################### */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+@font-face {
+  font-family: "Norse";
+  src: url(Norse-Bold.otf);
+}
+.main-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.bg {
+  position: relative;
+}
+.logo_wrap {
+  position: absolute;
+  top: 150px;
+  background-color: rgba(17, 17, 17, 0.493);
+  color: white;
+
+  font-family: "Norse";
+  font-size: max(4em, 5vw);
+  padding: 10px 0px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.logo_wrap > img {
+  object-fit: cover;
+  width: auto;
+  height: 70px;
+}
+img {
+  object-fit: cover;
+  width: 40vw;
+  height: 100vh;
+}
+
+.content {
+  font-family: "Ubuntu", sans-serif;
+}
+form {
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding-left: 30px;
+  padding-right: 80px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+form > p {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.content > p:first-child {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+  padding-left: 30px;
+  padding-right: 80px;
+  padding-top: 40px;
+  background-color: rgb(220, 224, 220);
+}
+.content > p:last-child {
+  font-size: 1.2em;
+  padding-left: 30px;
+}
+.content p:nth-child(2) {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: rgb(220, 224, 220);
+}
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+label {
+  text-transform: capitalize;
+  font-size: 1.1em;
+}
+button {
+  margin-top: 30px;
+  background-color: rgb(124, 197, 122);
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+button:hover {
+  background-color: rgb(101, 187, 98);
+}
+input {
+  border: 1px solid rgba(82, 82, 82, 0.329);
+  height: 26px;
+  border-radius: 4px;
+}
+input:focus {
+  outline: none;
+  border: none;
+  border: 2px solid rgb(25, 136, 43);
+}
+a {
+  text-decoration: none;
+}
+/* ##########################################3
+3############################################3 */
+
+@media only screen and (max-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+  img {
+    object-fit: cover;
+    width: 100vw;
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 430px) {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 10px;
+  }
+}
